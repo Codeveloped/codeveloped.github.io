@@ -1,3 +1,17 @@
+$(function () {
+    function toggle(cls) {
+        return function (ev) {
+            $(ev.target).toggleClass(cls);
+        }
+    }
+    
+    $(".box")
+        .click(toggle('click-visible'))
+        .hover(toggle('hover-visible'), toggle('hover-visible'));
+
+});
+
+/*
 $( document ).ready(function() {
 
     var toggleCaption = function(e, clicked) {
@@ -38,3 +52,4 @@ $( document ).ready(function() {
     });
 
 });
+*/
