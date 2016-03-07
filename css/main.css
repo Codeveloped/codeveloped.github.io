@@ -306,3 +306,10 @@ a {
         page-break-after: avoid;
     }
 }
+
+.box.click-visible .image-title {
+   display: block;
+}
+.box.hover-visible .image-title {
+   display: block;
+}
