@@ -1,7 +1,7 @@
 $(function () {
     function toggle(cls) {
         return function (ev) {
-            $(ev.target).toggleClass(cls);
+            $(ev.target).closest('.box').toggleClass(cls);
         }
     }
     
