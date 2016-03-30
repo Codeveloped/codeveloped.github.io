@@ -126,7 +126,15 @@ a {
 }
 
 
-
+pre {
+    float: left;
+}
+.blocker {
+    display: inline-block;
+    width:100px;
+    float:left;
+    height:10px;
+}
 
 
 

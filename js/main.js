@@ -1,15 +1,15 @@
 $(function () {
-    var START_DELAY_TIME = 700;
-    var INTERVAL_TIME = 300;
-    var SHOW_TIME = 1200;
+    var START_DELAY_TIME = 600;
+    var INTERVAL_TIME = 200;
+    var SHOW_TIME = 1000;
 
     function toggle(cls) {
         return function (ev) {
-            $(ev.target).closest('.box').toggleClass(cls);
+            $(ev.target).closest('.extra').toggleClass(cls);
         }
     }
     
-    $(".box")
+    $(".extra")
         .click(toggle('click-visible'))
         .hover(toggle('hover-visible'), toggle('hover-visible'))
         .each(function (idx, box) {
