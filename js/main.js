@@ -1,4 +1,8 @@
 $(function () {
+    var START_DELAY_TIME = 700;
+    var INTERVAL_TIME = 300;
+    var SHOW_TIME = 1200;
+
     function toggle(cls) {
         return function (ev) {
             $(ev.target).closest('.box').toggleClass(cls);
@@ -7,49 +11,15 @@ $(function () {
     
     $(".box")
         .click(toggle('click-visible'))
-        .hover(toggle('hover-visible'), toggle('hover-visible'));
+        .hover(toggle('hover-visible'), toggle('hover-visible'))
+        .each(function (idx, box) {
+            var $box = $(box);
+            setTimeout(function () {
+                $box.addClass('noticeme');
+                setTimeout(function () {
+                    $box.removeClass('noticeme');
+                }, SHOW_TIME);
+            }, START_DELAY_TIME + idx * INTERVAL_TIME);
+        });
 
 });
-
-/*
-$( document ).ready(function() {
-
-    var toggleCaption = function(e, clicked) {
-
-        // Don't hover so return
-        if(e.data('dontHover') && !clicked) {
-            e.data('dontHover', false);
-            return
-        }
-
-        // Return if caption is locked and hovered.
-        if(e.data('clickLock') && !clicked) return;
-
-        // Toggle caption if not clicked and set state for next event
-        if(!e.data('clickLock') && !clicked) {
-            e.data('keepOpen', e.is(":hidden"));
-            e.toggle();
-            return
-        }
-
-        // We only end up here when clicked
-        // If caption is closed then keep it closed on hoover exit.
-        if(!e.is(":hidden")) e.data('dontHover', true);
-        // If caption is opened by hover, don't toggle it again.
-        if(!e.data('keepOpen')) e.toggle();
-        // Toggle lock to make hover act properly
-        e.data('clickLock', !e.data('clickLock'));
-        // Set state for next event
-        e.data('keepOpen', false);
-
-    };
-
-
-    $(".box").hover(function(){
-        toggleCaption( $( this ).find( ".image-title"), false )
-    }).click(function(){
-        toggleCaption( $( this ).find( ".image-title"), true )
-    });
-
-});
-*/

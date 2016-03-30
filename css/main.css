@@ -116,7 +116,6 @@ a {
     background-color: black;
     text-align: center;
     color: white;
-    display: none;
 }
 
 .company-name {
@@ -307,9 +306,21 @@ a {
     }
 }
 
+.box .image-title {
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s, opacity 0.5s linear;
+}
+
 .box.click-visible .image-title {
-   display: block;
+    visibility: visible;
+    opacity: 1;
 }
 .box.hover-visible .image-title {
-   display: block;
+    visibility: visible;
+    opacity: 1;
+}
+.box.noticeme .image-title {
+    visibility: visible;
+    opacity: 1;
 }
