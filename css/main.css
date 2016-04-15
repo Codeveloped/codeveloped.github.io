@@ -1,3 +1,14 @@
+
+/*
+ * Codev color scheme
+ *
+ * #3C7859 Green
+ * #C03B30 Red
+ * #1D3F46 Blue
+ * #84B877 Light Green
+ * #1F2429 Black
+ */
+
 /*
  * What follows is the result of much research on cross-browser styling.
  * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
@@ -56,6 +67,10 @@ video {
     vertical-align: middle;
 }
 
+figure {
+    margin: 0;
+}
+
 /*
  * Remove default fieldset styles.
  */
@@ -86,7 +101,7 @@ textarea {
 }
 
 /* ==========================================================================
-   Author's custom styles
+   App styles
    ========================================================================== */
 
 a {
@@ -136,13 +151,9 @@ pre {
     height:10px;
 }
 
-
-
-
-
-
-
-
+footer {
+    /*background-color: #84B877;*/
+}
 
 
 /* ==========================================================================
