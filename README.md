@@ -91,3 +91,11 @@ the [guidelines](CONTRIBUTING.md):
 ## License
 
 The code is available under the [MIT license](LICENSE.txt).
+
+## Color Scheme
+
+"ide-dark-green": #3C7859,
+"ide-light-green": #84B877,
+"ide-red": #C1392A,
+"ide-dark-blue": #1D4249,
+"ide-black": #333333
