@@ -1,6 +1,6 @@
 {
-  "name": "Codeveloped Site",
-  "version": "1.2",
+  "name": "Codeveloped-Corporate",
+  "version": "0.1.0",
   "description": "React and redux powered corporate site",
   "main": "server.js",
   "directories": {
@@ -88,8 +88,6 @@
     "babel": "*",
     "babel-plugin-typecheck": "*",
     "babel-polyfill": "^6.3.14",
-    "bcrypt": "^0.8.5",
-    "bcrypt-nodejs": "*",
     "bluebird": "^3.0.6",
     "body-parser": "*",
     "classnames": "*",
