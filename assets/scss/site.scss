@@ -1,0 +1,176 @@
+@import "../antd/antd.min";
+
+$xxs: screen and (max-width : 399px); 
+$xs:  screen and (max-width : 767px); 
+$sm:  screen and (max-width : 991px); 
+$md:  screen and (max-width : 1199px); 
+$lg:  screen and (min-width : 1200px); 
+
+$xxs-x: screen and (max-width : 399px);
+$xs-x:  screen and (min-width : 400px); 
+$sm-x:  screen and (min-width : 768px); 
+$md-x:  screen and (min-width : 992px); 
+$lg-x:  screen and (min-width : 1200px); 
+
+$codevred: #d93e27;
+$codevdarkgreen: #38805f;
+$codevlightgreen: #89bf7d;
+$codevdarkblue: #212933;
+$codevlightblue: #144b59;
+
+
+body {
+	font-family: 'Open Sans', sans-serif;
+	color: $codevdarkblue;
+	font-size: 16px;
+}
+
+a,
+a:link,
+a:hover,
+a:focus,
+a:visited {
+	color: inherit;
+}
+a:hover,
+a:focus {
+	border-bottom: 1px dashed;
+}
+
+@keyframes bgchange {
+    0% {background:$codevdarkgreen;}
+    20% {background:$codevlightgreen;}
+    40% {background:$codevlightblue;}
+    60% {background:$codevdarkblue;}
+    80% {background:$codevred;}
+    100% {background:$codevdarkgreen;}
+}
+@keyframes fgchange {
+    0% {color:$codevdarkgreen;}
+    20% {color:$codevlightgreen;}
+    40% {color:$codevlightblue;}
+    60% {color:$codevdarkblue;}
+    80% {color:$codevred;}
+    100% {color:$codevdarkgreen;}
+}
+
+#hero {
+	min-height: 100vh;
+	width: 100vw;
+	max-width: 100%;
+	z-index: 10;
+	background: $codevdarkgreen;
+	animation: bgchange 60s infinite;
+	color: white;
+}
+
+.spacer {padding-bottom: 75%;}
+.spacer-container { max-height: 10em; }
+
+.codev-logo {
+	font-family: 'Montserrat', sans-serif;
+	font-weight: 500;
+	letter-spacing: -.04em;
+	font-size: 3em;
+	line-height: 1em;
+	margin: 0;
+	text-indent: -9999em;
+
+	@media #{$xs} {
+		font-size: 2em;
+	}
+	.logo {
+		float: left;
+		vertical-align: middle;
+		margin-left: -1.2em;
+		text-align: right;
+	}
+	img {
+		width: 7.3em;
+		display: block;
+	}
+
+	em {
+		font-weight: 700;
+		font-style: normal;
+	}
+}
+.codev-slogan {
+	font-family:  'Montserrat', sans-serif;
+	font-size: 1.5em;
+	margin: 0 0 1.5em;
+	font-weight: 500;
+	color: rgba(255,255,255,.8);
+
+	@media #{$xs} {
+		font-size: 1em;
+	}
+}
+.incentive {
+	margin-bottom: 2em;
+}
+
+.dudes {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	margin: 3em 0 2em;
+}
+
+.dude {
+	text-align: center;
+	padding: 0 0 3em;
+	width: 25%;
+
+	@media #{$xs}  { width: 50%; }
+	@media #{$xxs} { width: 100%; }
+
+	span,
+	a {
+		display: block;
+	}
+	.name {
+		font-family: 'Montserrat', sans-serif;
+		color: rgba(255,255,255,.6);
+		margin-bottom: 1em;
+		em { 
+			color: rgba(255,255,255,1); 
+			font-style: normal;
+		}
+	}
+	.phone,
+	.mail {
+		font-size: .8em;
+		background: rgba(255,255,255,.75);
+		color: $codevdarkgreen;
+		animation: fgchange 60s infinite;
+		font-weight: bold;
+		border-radius: 2em;
+		padding: .5em;
+		margin: .5em;
+		transition: all .2s linear;
+
+		@media #{$sm} { font-size: .7em; }
+		
+		&:hover {
+			border: none;
+			background-color: white;
+		}
+	}
+	img {
+		width: 6em;
+		border-radius: 100%;
+		background: rgba(255,255,255,.5);
+		box-shadow: 0 0 0 9px white;
+		margin-bottom: 1em;
+	}
+}
+
+.footer {
+	font-size: .75em;
+	color: rgba(255,255,255,.5);
+	margin: 2em 0;
+	text-align: center;
+
+	span { white-space: nowrap; }
+}

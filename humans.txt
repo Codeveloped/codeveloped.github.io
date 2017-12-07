@@ -6,7 +6,7 @@
     Paul Scheltema -- Developer
     Ruud de Klerk -- Developer
     Elwin Buisman -- Developer
-    Jan Albert Jager -- Smart guy
+    Jeroen Huls -- Other stuff
 
 # THANKS
 
@@ -14,5 +14,4 @@
 
 # TECHNOLOGY COLOPHON
 
-    CSS3, HTML5
-    Apache Server Configs, jQuery, Modernizr, Normalize.css
+    CSS3, HTML5, SCSS, SVG
